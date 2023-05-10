@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.body-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1920px;
+  height: 929px; 
+}
+
+.content-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F3F5FC;
+  width: 1400px;
+  height: 850px;
+  border-radius: 20px;
+  box-shadow: 24px 24px 24px -8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 850px;
+  margin-top: 40px;
+}
+
+.logo img {
+  width: 120px;
+  height: 48px;
+  
+}
+
+.center-column {
+  width: 810px;
+  height: 850px;
+  /* margin-top: 300px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+.text-area {
+  width: 680px;
+  height: 530px;
+  font-size: 32px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  color: #0A3871;
+}
+
+.text-area::placeholder {
+  color: #0A3871;
+}
+
+.warning {
+  width:300px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  grid-gap: 8px;
+  margin-left: -379px;
+}
+
+.msg-warning p {
+  color: #495057;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  opacity: 0.8;
+}
+
+.warning img{
+  width: 16px;
+  height: 16px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.buttons button {
+  width: 328px;
+  height: 67px;
+  border-radius: 24px;
+  padding: 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.encrypt button {
+  background: #0A3871;
+  color: #FFFFFF;
+}
+
+.unencrypt button {
+  border: 1px solid #0A3871;
+  background: #D8DFE8;
+  color: #0A3871 ;
+}
+
+.right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 440px;
+  height: 850px;
+}
+
+.right-column > .box-info {
+  width: 400px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  background: #FFFFFF;
+  color: black;
+  grid-gap: 16px;
+}
+
+.img-person img {
+  width: 336px;
+  height: 304px;
+}
+
+.indication p {
+  color: #495057;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
