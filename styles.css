@@ -33,10 +33,9 @@ body {
   margin-top: 40px;
 }
 
-.logo img {
+.logo a {
   width: 120px;
   height: 48px;
-  
 }
 
 .center-column {
