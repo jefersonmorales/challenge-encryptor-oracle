@@ -2,8 +2,8 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  color: white;
-  font-family: 'Roboto Mono', monospace;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
 }
 
 .body-page {
@@ -42,7 +42,6 @@ body {
 .center-column {
   width: 810px;
   height: 850px;
-  /* margin-top: 300px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,6 +64,22 @@ body {
   color: #0A3871;
 }
 
+.text-area::-webkit-scrollbar {
+  width: 12px;
+}
+
+.text-area::-webkit-scrollbar-track {
+  background: #e3e4e7;
+  scroll-margin-left: 20px;
+  border-radius: 20px;
+}
+
+.text-area::-webkit-scrollbar-thumb {
+  background-color: #0A3871;    
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
 .warning {
   width:300px;
   height: 20px;
@@ -77,7 +92,6 @@ body {
 
 .msg-warning p {
   color: #495057;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -129,7 +143,7 @@ body {
   height: 850px;
 }
 
-.right-column > .box-info {
+.box-info {
   width: 400px;
   height: 750px;
   display: flex;
@@ -139,8 +153,13 @@ body {
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   border-radius: 32px;
   background: #FFFFFF;
-  color: black;
-  grid-gap: 16px;
+}
+
+.first-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-person img {
@@ -166,17 +185,61 @@ body {
   text-align: center;
 }
 
-.text-area::-webkit-scrollbar {
+.msg-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 50px;
+}
+
+.btn-copy button {
+  padding: 24px;
+  width: 336px;
+  height: 67px;
+  border: 1px solid #0A3871;
+  border-radius: 24px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #0A3871;
+}
+
+/* Msg converted scroll bar*/
+
+.msg-converted {
+  width: 300px;
+  height: 534px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #495057;
+  cursor: default;
+}
+
+.msg-converted::-webkit-scrollbar {
   width: 12px;
 }
 
-.text-area::-webkit-scrollbar-track {
+.msg-converted::-webkit-scrollbar-track {
   background: #e3e4e7;
   border-radius: 20px;
 }
 
-.text-area::-webkit-scrollbar-thumb {
+.msg-converted::-webkit-scrollbar-thumb {
   background-color: #0A3871;    
   border-radius: 20px;
   border: 3px solid transparent;
 }
+
+.hider {
+  display: none;
+}
+

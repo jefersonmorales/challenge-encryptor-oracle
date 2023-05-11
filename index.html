@@ -8,8 +8,9 @@
     <title>Encriptador - Home</title>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="encriptador.js">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
     
   </head>
 
@@ -19,7 +20,7 @@
       <div class="content-page">
 
         <div class="logo">
-          <img src="/images/Logo.png" alt="logo">
+          <a href="index.html"><img src="/images/Logo.png" alt="logo"></a>
         </div>
 
         <div class="center-column">
@@ -44,11 +45,11 @@
           <div class="buttons">
 
             <div class="encrypt">
-              <button type="submit">Encriptar</button>
+              <button class="btn-encrypt" type="submit">Encriptar</button>
             </div>
 
             <div class="unencrypt">
-              <button type="submit">Desencriptar</button>
+              <button class="btn-unencrypt" type="submit">Desencriptar</button>
             </div>
             
           </div>
@@ -57,18 +58,35 @@
         <div class="right-column">
           <div class="box-info">
 
-            <div class="img-person">
-              <img src="images/Muñeco.png" alt="Muñeco">
+            <div class="first-page">
+              <div class="img-person">
+                <img src="images/Muñeco.png" alt="Muñeco">
+              </div>
+
+              <div class="info-container">
+
+                <div class="status">
+                  <h3>Ningún mensaje fue encontrado</h3>
+                </div>
+
+                <div class="indication">
+                  <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+
+              </div>
             </div>
 
-            <div class="status">
-              <h3>Ningún mensaje fue encontrado</h3>
-            </div>
+            <div class="msg-result">
+              <textarea class="msg-converted" name="" id="msg-result-converted" cols="auto" rows="auto" readonly="readonly"></textarea>
 
-            <div class="indication">
-              <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+              <div class="btn-copy">
+                <button onclick="btnCopy()" class="btn-copy">Copiar</button>
+              </div>
+              
             </div>
           </div> 
+
+
         </div>
       </div>
     </div>
@@ -76,7 +94,6 @@
   
   </body>
 
-  <script>
-    
-  </script>
+  <script src="behaviour.js"></script>
+
 </html>
