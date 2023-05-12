@@ -1,51 +1,43 @@
 var btnEncrypt = document.querySelector(".btn-encrypt");
 var btnUnencrypt = document.querySelector(".btn-unencrypt");
-var boxDraftAnimated = document.querySelector(".first-page");
-var textResult = document.querySelector(".msg-converted");
-var boxMsgResult = document.querySelector(".msg-result");
-var boxText = document.querySelector(".text-area");
+var missingTextContainer = document.querySelector(".missing-text-container");
+var textConverted = document.querySelector(".text-converted");
+var textConvertedContainer = document.querySelector(".text-converted-container");
+var inputUserText = document.querySelector(".input-text");
 
 btnEncrypt.onclick = encrypt;
 btnUnencrypt.onclick = unencrypt;
 
-hideBoxTextConverted();
-
-function comprobateLength() {
-  if(boxText.value.length > 0) {
-    alert("It's ok")
-  } else if(boxText.value.length == 0) {
-    alert("put any msg")
-  }
-}
+hideTextConvertedContainer();
 
 function encrypt() {
-  hideBoxContent();
-  showMsgConvertedContainer();
-  var boxText = recoverText()
-  textResult.textContent = encryptText(boxText);
+  hideMissingTextContainer();
+  showTextConvertedContainer();
+  var inputUserText = recoverText()
+  textConverted.textContent = encryptText(inputUserText);
 }
 
 function unencrypt() {
-  hideBoxContent();
-  var boxText = recoverText()
-  textResult.textContent = unencryptText(boxText);
+  hideMissingTextContainer();
+  var inputUserText = recoverText()
+  textConverted.textContent = unencryptText(inputUserText);
 }
 
-function hideBoxContent() {
-  boxDraftAnimated.classList.add("hider");
+function hideMissingTextContainer() {
+  missingTextContainer.classList.add("hider");
 }
 
-function hideBoxTextConverted() {
-  boxMsgResult.classList.add("hider");
+function hideTextConvertedContainer() {
+  textConvertedContainer.classList.add("hider");
 }
 
-function showMsgConvertedContainer() {
-  boxMsgResult.classList.remove("hider");
+function showTextConvertedContainer() {
+  textConvertedContainer.classList.remove("hider");
 }
 
 function recoverText() {
-  boxText = boxText
-  return boxText.value;
+  inputUserText = inputUserText
+  return inputUserText.value;
 }
 
 function encryptText(message) {
@@ -96,14 +88,12 @@ function unencryptText(message) {
     }
   }
   return finalText;
-  
 }
 
 function btnCopy() {
-  var copyText = document.getElementById("msg-result-converted");
+  var copyText = document.getElementById("text-converted");
 
   copyText.select();
   copyText.setSelectionRange(0, -1);
   navigator.clipboard.writeText(copyText.value);
-
 }

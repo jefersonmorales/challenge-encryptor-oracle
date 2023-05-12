@@ -4,14 +4,13 @@
   <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width'>
+    <title>Encrypt & Unencrypt - ONE</title>
 
-    <title>Encriptador - Home</title>
+    <link rel="shortcut icon" href="images/icon.png">
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="script" href="encriptador.js">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
-    
   </head>
 
   <body>
@@ -19,65 +18,72 @@
     <div class="body-page">
       <div class="content-page">
 
-        <div class="logo">
+        <section class="left-column">
           <a href="index.html"><img src="images/Logo.png" alt="logo"></a>
-        </div>
+        </section>
 
-        <div class="center-column">
-          <textarea 
-          class="text-area"
-          id="text-area"           
-          cols="20" 
-          rows="10"
-          placeholder="Ingrese el texto aquí", 
-          ></textarea>
+        <section class="center-column">
+          
+          <div class="text-area-input-text">
+            <textarea 
+            class="input-text"
+            id="input-text"           
+            placeholder="Ingrese el texto aquí", 
+            ></textarea>
+          </div>
 
-          <div class="warning">
-            <div class="image-warning">
+          <div class="warning-container">
+            
+            <div class="icon-warning">
               <img src="images/Advertencia.png" alt="">
             </div>
 
-            <div class="msg-warning">
+            <div class="text-warning">
               <p>Solo letras minúsculas y sin acentos</p>
             </div>
+
           </div>
 
-          <div class="buttons">
+          <div class="buttons-container">
 
             <div class="encrypt">
               <button class="btn-encrypt" type="submit">Encriptar</button>
             </div>
-
+            
             <div class="unencrypt">
               <button class="btn-unencrypt" type="submit">Desencriptar</button>
             </div>
             
           </div>
-        </div>
+        </section>
 
-        <div class="right-column">
-          <div class="box-info">
+        <section class="right-column">
+          <div class="text-result-container">
+            
+            <div class="missing-text-container">
 
-            <div class="first-page">
-              <div class="img-person">
-                <img src="images/Muñeco.png" alt="Muñeco">
+              <div class="missing-text-image">
+                <img src="images/Muñeco.png" alt="sin_texto">
               </div>
 
-              <div class="info-container">
-
-                <div class="status">
-                  <h3>Ningún mensaje fue encontrado</h3>
-                </div>
-
-                <div class="indication">
-                  <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-                </div>
-
+              <div class="missing-text-alert">
+                <h3>Ningún mensaje fue encontrado</h3>
               </div>
+
+              <div class="write-text-indication">
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+              </div>
+
             </div>
 
-            <div class="msg-result">
-              <textarea class="msg-converted" name="" id="msg-result-converted" cols="auto" rows="auto" readonly="readonly"></textarea>
+            <div class="text-converted-container">
+              
+              <div class="textarea-text-converted">
+                <textarea
+                  class="text-converted"
+                  id="text-converted"
+                  readonly="readonly"></textarea>
+              </div>
 
               <div class="btn-copy">
                 <button onclick="btnCopy()" class="btn-copy">Copiar</button>
@@ -85,15 +91,10 @@
               
             </div>
           </div> 
-
-
-        </div>
+        </section>
       </div>
     </div>
 
-  
   </body>
-
   <script src="behaviour.js"></script>
-
 </html>
