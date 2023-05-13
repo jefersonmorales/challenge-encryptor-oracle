@@ -1,5 +1,14 @@
 /* Desktop */
 @media (min-width:1360px) {
+  html, 
+  body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .body-page {
     display: flex;
     justify-content: center;
@@ -9,18 +18,18 @@
     gap: 12px;
   }
 
-  .left-column {
+  .logo-container {
     display: flex;
     justify-content: center;
     width: 200px;
     height: 704px;
   }
 
-  .left-column img {
+  .logo-container img {
     margin-top: 40px;
   }
 
-  .center-column {
+  .entry-container {
     width: 810px;
     height: 704px;
     display: flex;
@@ -59,7 +68,7 @@
     height: 67px;
   }
 
-  .right-column {
+  .response-container {
     width: 440px;
     height: 704px;
     display: flex;
@@ -81,6 +90,15 @@
     height: 304px;
   }
 
+  .missing-text-alert ,
+  .write-text-indication {
+    width: 336px;
+  }
+  
+  .write-text-indication {
+    font-size: 16px;
+  }
+
   .text-converted {
     width: 300px;
     height: 450px;
@@ -99,16 +117,16 @@
     gap: 25px;
   }
 
-  .left-column {
+  .logo-container {
     width: 100%;
     height: 240px;
   }
 
-  .left-column img {
+  .logo-container img {
     margin: 76px 0 0 40px;
   }  
 
-  .center-column {
+  .entry-container {
     width: 100%;
     height: auto;
     display: flex;
@@ -149,7 +167,7 @@
     height: 67px;
   }
   
-  .right-column {
+  .response-container {
     width: 100%;
     height: auto;
     display: flex;
@@ -200,16 +218,16 @@
   gap: 25px;
   }
 
-  .left-column {
+  .logo-container {
     width: 100%;
     height: 96px;
   }
 
-  .left-column img {
+  .logo-container img {
     margin: 24px 0 0 16px;
   }
 
-  .center-column {
+  .entry-container {
     width: 100%;
     height: auto;
     display: flex;
@@ -250,7 +268,7 @@
     width: 343px;
   }
 
-  .right-column {
+  .response-container {
     width: 100%;
     height: auto;
     display: flex;
@@ -270,12 +288,13 @@
 
   .text-converted-container {
     width: 343px;
-    height: 595px;
+    height: auto;
+    grid-gap: 32 ;
   }
 
   .text-converted {
     width: 279px;
-    height: 432px;
+    height: 200px;
   }
 
   .btn-copy button {
